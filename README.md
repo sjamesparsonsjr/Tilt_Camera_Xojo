@@ -14,6 +14,10 @@ Cell Eleven is implementing an 8MP camera with a 180° tilt feature.  This is a 
 
 [WiringPi](http://wiringpi.com/download-and-install/) is a Raspberry Pi package that allows XOJO to communicate with the GPIO pins.
 
+[XOJO GPIO](https://github.com/xojo/GPIO)  documentation on GITHUB
+
+[XOJO Servo Example](https://docs.xojo.com/UserGuide:Raspberry_Pi_Controlling_a_Servo) guide explains the basics of GPIO programming for the Raspberry Pi.
+
 ## Getting started
  1. Download [XOJO](https://www.xojo.com/)
  2. Notes on  [WiringPi](http://wiringpi.com/download-and-install/)
@@ -26,13 +30,14 @@ Cell Eleven is implementing an 8MP camera with a 180° tilt feature.  This is a 
  **NOTES:** Raspberry Pi needs  ```>>>sudo apt-get install wiringpi```
 
 ## User Manual
-1. Run  ```Tilt_Camera_Xojo.xojo_binary_project``` remotely on the raspberry pi
-2. Download  ```TakePicture.py``` to the Raspberry Pi
-3. *Shell Path* Field is the location of the  ```TakePicture.py```  file.  <br>**EXAMPLE**  ```/home/pi/Desktop/TakePicture.py``` 
-4. *Save Path* Field is the location you want the pictures saved.  <br>**EXAMPLE** ```/home/pi/Desktop/``` 
-5. *Tilt* RadioButton moves the servo; <br>Forward = 0 °<br>Down = 90°<br> Back = 180°
-6. *Take Picture* button, executes the servo, takes a picture using the python script, save the image to the path, and updates the image list.
-7. Clicking on an item on the *Images* list will scale and display the selected image.
+1. Set variable ```kSensorPin``` to your PWM pin on your Raspberry Pi.  It is currently set to **GPIO 18 (Pin 12)**.
+2. Run  ```Tilt_Camera_Xojo.xojo_binary_project``` remotely on the raspberry pi
+3. Download  ```TakePicture.py``` to the Raspberry Pi
+4. *Shell Path* Field is the location of the  ```TakePicture.py```  file.  <br>**EXAMPLE**  ```/home/pi/Desktop/TakePicture.py``` 
+5. *Save Path* Field is the location you want the pictures saved.  <br>**EXAMPLE** ```/home/pi/Desktop/``` 
+6. *Tilt* RadioButton moves the servo; <br>Forward = 0 °<br>Down = 90°<br> Back = 180°
+8. <kbd>Take Picture</kbd> button, executes the servo, takes a picture using the python script, save the image to the path, and updates the image list.
+9. Clicking on an item on the *Images* list will scale and display the selected image.
 
 ## Authors
 
@@ -48,3 +53,4 @@ Please consider donating to the future of Cell Eleven
 
 
 [![Donation](https://www.thenewatlantis.com/imgLib/20200417_paypal.jpg)](https://www.paypal.com/paypalme/my/profile)
+
